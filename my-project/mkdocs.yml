@@ -1,0 +1,11 @@
+# основной файл конфигурации
+site_name: Project_01
+site_url: https://example.com/
+
+
+
+
+nav:
+    - Home: index.md
+    - Application  : application_mkdocs/model.md
+    - About: about.md
