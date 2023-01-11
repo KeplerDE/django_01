@@ -12,3 +12,14 @@ class Blog(models.Model):
 
 class Fruit(models.Model):
     name = models.CharField(max_length=100, primary_key=True)
+
+
+class Articles(models.Model):
+    title = models.CharField(max_length=150)
+    content = models.TextField(blank=True)
+    slug = models.SlugField(unique=True)
+
+    # template_name = ""
+
+    def __str__(self):
+        return self.title

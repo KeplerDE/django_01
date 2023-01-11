@@ -1,8 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import Blog
+from .models import Blog, Articles
 
 
 class ArticleListView(ListView):
-    model = Blog
-    template_name = 'index.html'
+    model = Articles
+    template_name = 'articles_list.html'
+
+
+class ArticleDetailView(DetailView):
+    model = Articles
+    context_object_name = 'art'
+    template_name = 'article_detail.html'

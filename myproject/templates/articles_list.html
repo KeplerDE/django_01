@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load  static %}
+
+#my_site/templates/my_site/index.html
+
+{% block content%}
+
+{% if object_list %}
+
+<ul>
+{% for list in object_list %}
+
+<li><a href="/article/{{ list.slug }}/">{{ list.title}}</a></li>
+
+{% endfor %}
+
+
+</ul>
+{% else%}
+<h4>Пока нет записей, зайдите позже.</h4>
+
+
+
+{% endif %}
+
+
+
+
+
+{% endblock %}
