@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sites',   # +
     'application',
     'django_extensions',
+    'getlink_app',
+
 ]
 
 SITE_ID = 1
