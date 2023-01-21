@@ -7,7 +7,9 @@ class Page(models.Model):
 
     name = models.CharField(max_length=160)
     content = models.TextField(blank=True)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(max_length=50,
+                            db_index=True,
+                            unique=True)
     data_created = models.DateTimeField(auto_now_add=True)
     data_updated = models.DateTimeField(auto_now=True)
 
