@@ -13,3 +13,14 @@ class PageDetailView(DetailView):
     context_object_name = 'details'          # обращаемся в шаблоне по такому фрагменту
     template_name = "slug_url/detail_slug.html"
 
+
+class PageListNamespace(ListView):
+    model = Page
+    template_name = "namespace/list_ns.html"
+    context_object_name = 'pg'
+
+
+class PageDetailNamespace(DetailView):
+    model = Page
+    template_name = "namespace/detail_ns.html"
+

@@ -20,6 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('application.urls')),
     path('article/', include('application.urls')),              # ссылочка для перехода к деталям
-    path('page/', include('getlink_app.urls')),                 # ссылочка для перехода к новому приложению
+    path('page/', include('getlink_app.urls', 'yes_ns')),    # окружение для url             # ссылочка для перехода к новому приложению
 
 ]
