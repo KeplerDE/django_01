@@ -10,5 +10,6 @@ class PageListView(ListView):
 
 class PageDetailView(DetailView):
     model = Page
-    context_object_name = 'detail_slug'
+    context_object_name = 'details'          # обращаемся в шаблоне по такому фрагменту
     template_name = "slug_url/detail_slug.html"
+

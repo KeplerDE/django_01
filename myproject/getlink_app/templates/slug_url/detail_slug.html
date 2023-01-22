@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
-{% load static %}
 
 
 {% block content %}
+<h2>{{ details.name }}</h2>
+
+<div class="content">{{ details.content }}</div>
+<p>{{ details.data_created }}</p>
+<p>{{ details.slug }}</p>
+
 
 {% endblock %}

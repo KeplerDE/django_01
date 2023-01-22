@@ -2,7 +2,7 @@ from django import urls
 from django.urls import path
 from django.urls.conf import re_path
 from .views import PageListView, PageDetailView
-
+from .models import Page
 
 app_name = 'getlink'
 
@@ -11,8 +11,8 @@ app_name = 'getlink'
 
 
 urlpatterns = [
-    path('slug/', PageListView.as_view(), name='slug_list'),
-    path('<slug>/', PageDetailView.as_view(), name="slug_detail")
+    path("slug/", PageListView.as_view(), name="list_slug"),
+    path('<slug>/', PageDetailView.as_view(), name="details")
     # path('<slug:slug>/', PageDetailView.as_view(), name='detail_slug')
 
 ]
