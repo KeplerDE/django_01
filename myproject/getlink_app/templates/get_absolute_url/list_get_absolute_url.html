@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 {%  load static %}
 
@@ -8,7 +9,7 @@
 <ul>
 {% for page in object_list %}
 
-<li><a href="{% url 'yes_ns:view_detail_ns' pk=page.id %}">{{page.name}}</a></li>
+<li><a href="{% url 'yes_ns:detail_absolute_path'  page.id page.slug  %} ">{{page.name}}</a></li>
 
 {#  {% url 'getlink_app:view_list_ns' %}   #}
 {#  {% url 'yes_ns:view_detail_ns' %}   #}
