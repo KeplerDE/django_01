@@ -21,5 +21,7 @@ urlpatterns = [
     path('', include('application.urls')),
     path('article/', include('application.urls')),              # ссылочка для перехода к деталям
     path('page/', include('getlink_app.urls', 'yes_ns')),    # окружение для url             # ссылочка для перехода к новому приложению
+    path('arti/', include('my_site.urls', 'ab_ns2')),
+
 
 ]

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{%  load static %}
+
+{% block content%}
+
+{% if object_list %}
+
+<ul>
+{% for absolute in object_list %}
+{#обратить внимание изменить имя ns.id #}
+<li><a href="{{absolute.get_absolute_url}}">{{absolute.name}}</a></li>
+
+{% endfor %}
+
+
+</ul>
+{% else%}
+<p>Пока нет записей Ye ytn.</p>
+{%endif%}
+{% endblock %}
+
+<!--getlink_app/templates/getlink_app/base.html-->

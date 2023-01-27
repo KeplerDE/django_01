@@ -1,0 +1,25 @@
+Как работает Django?
+
+1. Создать модель и разместить информацию в базу данных.
+
+2. Представления.
+
+3. url - путь.
+
+4. html code and templates
+
+
+
+Detail:
+1 
+slug add models
+slug = models.SlugField(unique=True)
+
+
+2. urls.py
+
+ path('blog/<slug:slug>/', PostDetailView.as_view(), name='post-detail'),
+ либо по pk
+  path('blog/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+
+

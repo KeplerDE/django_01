@@ -9,7 +9,11 @@
 <ul>
 {% for page in object_list %}
 
-<li><a href="{% url 'yes_ns:detail_absolute_path'  page.id page.slug  %} ">{{page.name}}</a></li>
+{#  <li><a href="{{page.id}}/{{page.slug}}">{{page.name}}</a></li> # вытягивает и так #}
+<li><a href="{{ page.get_absolute_url }}">{{page.name}}</a></li>
+{# чтобы заработал get_absolute_url, нужно поднять весь путь новый, по документации #}
+
+{#  <li><a href="{{page.get_absolute_url}}">{{page.name}}</a></li> #}
 
 {#  {% url 'getlink_app:view_list_ns' %}   #}
 {#  {% url 'yes_ns:view_detail_ns' %}   #}

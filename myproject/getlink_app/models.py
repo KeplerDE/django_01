@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 class Page(models.Model):
     class Meta:
         verbose_name = "Страница id, slug, namespace"
@@ -15,3 +15,9 @@ class Page(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('yes_ns:detail_absolute_path', kwargs={'id': self.id, 'slug': self.slug})    # теперь он знает что возвращать
+    # идёт пряиое обрашение
+    # def get_absolute_url(self):
+    #     return f"/page/absolute-path/{self.id}/{self.slug}/detail/"

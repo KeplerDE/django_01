@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'application',
     'django_extensions',
     'getlink_app',
+    'my_site',
 
 ]
 

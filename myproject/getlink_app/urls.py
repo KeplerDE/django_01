@@ -27,4 +27,5 @@ urlpatterns = [
     path('absolute-path/<int:id>/<str:slug>/detail/', PageDetailGetAbsoluteUrl.as_view(),
          name='detail_absolute_path'),
 
+
 ]
